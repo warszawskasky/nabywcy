@@ -16,11 +16,21 @@ body {
     margin: 0 auto;
 }
 
+/* Gradientowe tło headera */
+header {
+    background: linear-gradient(135deg, #2980b9, #6dd5fa);
+    color: white;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(41, 128, 185, 0.3);
+    margin-bottom: 30px;
+}
+
 /* Nagłówki */
 h1 {
-    color: #2c3e50;
     margin-bottom: 10px;
     font-size: 2.5em;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
 h2 {
@@ -29,6 +39,11 @@ h2 {
     margin-bottom: 15px;
     border-bottom: 2px solid #2980b9;
     padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+h2:hover {
+    color: #1abc9c;
 }
 
 h3 {
@@ -52,9 +67,17 @@ ul {
 
 ul li {
     position: relative;
-    padding-left: 25px;
-    margin-bottom: 8px;
+    padding-left: 30px;
+    margin-bottom: 12px;
     font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 4px;
+    cursor: default;
+}
+
+ul li:hover {
+    background-color: #d0f0fd;
+    color: #2980b9;
 }
 
 /* Ikony emoji jako "list-style" */
@@ -63,6 +86,7 @@ ul li::before {
     position: absolute;
     left: 0;
     top: 0;
+    font-size: 1.3em;
 }
 
 /* Link do Facebooka */
@@ -72,13 +96,33 @@ ul li::before {
     color: #1877f2;
     text-decoration: none;
     border-bottom: 2px solid transparent;
-    transition: border-color 0.3s ease;
+    border-radius: 4px;
+    padding: 5px 8px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
 }
 
 .facebook-link:hover,
 .facebook-link:focus {
-    border-bottom: 2px solid #1877f2;
+    background-color: #1877f2;
+    color: white;
+    border-bottom: 2px solid #0f4cba;
     outline: none;
+    box-shadow: 0 0 8px rgba(24, 119, 242, 0.7);
+}
+
+/* Cienie pod sekcjami */
+section {
+    background-color: white;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+section:hover {
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
 /* Stopka */
@@ -87,9 +131,6 @@ footer {
     border-top: 1px solid #ddd;
     padding-top: 15px;
     text-align: center;
-}
-
-.footer-note {
     font-size: 0.9em;
     color: #777;
 }
