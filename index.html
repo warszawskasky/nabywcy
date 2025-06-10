@@ -11,7 +11,27 @@ opinią o mieszkaniach, lokalizacji i deweloperze.">
     <meta name="keywords" content="Warszawska Sky, Nowy Dwór Mazowiecki, mieszkania,
 inwestycja, forum mieszkańców, opinie, Warszawska Sky forum, osiedle Warszawska Sky,
 nowe mieszkania Nowy Dwór, deweloper, HREIT, BDC">
+
     <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Dodatkowy styl animacji pulsowania linku */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(24, 119, 242, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 10px 10px rgba(24, 119, 242, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(24, 119, 242, 0);
+            }
+        }
+
+        .facebook-link.pulse {
+            animation: pulse 2s infinite;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 
 <body>
@@ -53,7 +73,7 @@ nowe mieszkania Nowy Dwór, deweloper, HREIT, BDC">
             <strong>forum mieszkańców na Facebooku</strong> – to niezależne miejsce wymiany
             informacji i doświadczeń.</p>
         <p><a href="https://www.facebook.com/groups/1485577745254349/" target="_blank"
-                style="font-weight: bold; font-size: 1.2em;">👉 PRZEJDŹ DO FORUM NA
+                class="facebook-link">👉 PRZEJDŹ DO FORUM NA
                 FACEBOOKU</a></p>
     </section>
 
@@ -68,9 +88,19 @@ nowe mieszkania Nowy Dwór, deweloper, HREIT, BDC">
     </section>
 
     <footer>
-        <p style="font-size: 0.9em; color: #777;">Strona stworzona przez mieszkańców. Nie
+        <p class="footer-note">Strona stworzona przez mieszkańców. Nie
             jesteśmy oficjalnym przedstawicielem dewelopera.</p>
     </footer>
+
+    <script>
+        // Po załadowaniu strony dodaj klasę z animacją do linku Facebook
+        document.addEventListener('DOMContentLoaded', () => {
+            const fbLink = document.querySelector('.facebook-link');
+            if (fbLink) {
+                fbLink.classList.add('pulse');
+            }
+        });
+    </script>
 </body>
 
 </html>
