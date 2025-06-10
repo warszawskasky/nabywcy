@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Test</title>
+  <style>
+    body { 
+      font-family: sans-serif; 
+      background: #f4f4f4; 
+      text-align: center; 
+      margin-top: 50px; 
+    }
+
+    /* Kontener <p> ustawiamy na pozycję relative i ukrywamy overflow */
+    p {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      font-size: 5em; /* większe emoji */
+      margin: 40px 0;
+      height: 1.2em; /* wysokość, żeby p było stabilne */
+    }
+
+    /* Animowany element - emoji w <span> */
+    p span {
+      position: absolute;
+      animation: lataj 8s linear infinite;
+      /* Dla lepszego efektu możesz dodać: */
+      user-select: none; /* nie zaznacza się podczas przeciągania */
+    }
+
+    /* Definicja animacji przesuwającej emoji z prawej do lewej */
+    @keyframes lataj {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Test</h1>
+  <p><span>🎉</span></p>
+</body>
+</html>
