@@ -1,0 +1,114 @@
+/* Reset marginesów i paddingów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styl body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Nagłówki */
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #34495e;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #34495e;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Paragrafy */
+p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+/* Listy */
+ul {
+    list-style: none;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+/* Ikony emoji jako "list-style" */
+ul li::before {
+    content: attr(data-icon);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Link do Facebooka */
+.facebook-link {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #1877f2;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.facebook-link:hover,
+.facebook-link:focus {
+    border-bottom: 2px solid #1877f2;
+    outline: none;
+}
+
+/* Stopka */
+footer {
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.footer-note {
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Responsywność */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    p, ul li {
+        font-size: 1em;
+    }
+}
