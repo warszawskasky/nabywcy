@@ -51,6 +51,24 @@
     </section>
 
     <section>
+      <h2>Aktualności z budowy</h2>
+      <article>
+        <p class="data-update">Maj 2025</p>
+        <div class="gallery">
+          <img src="zdjecie1.jpg" alt="Postęp budowy Warszawska Sky - zdjęcie 1" class="gallery-item" />
+          <img src="zdjecie2.jpg" alt="Postęp budowy Warszawska Sky - zdjęcie 2" class="gallery-item" />
+          <img src="zdjecie3.jpg" alt="Postęp budowy Warszawska Sky - zdjęcie 3" class="gallery-item" />
+        </div>
+        <p>Trwają prace na elewacji klatki B oraz prace wykończeniowe wewnątrz budynku.</p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Lokalizacja inwestycji</h2>
+      <div id="map"></div>
+    </section>
+
+    <section>
       <h2>Dołącz do społeczności – Forum mieszkańców Warszawska Sky</h2>
       <p>Szukasz opinii o mieszkaniach Warszawska Sky? Chcesz porozmawiać z innymi nabywcami lub zapytać o postępy budowy? Dołącz do naszego forum mieszkańców na Facebooku – to niezależne miejsce wymiany informacji i doświadczeń.</p>
       <p><a href="https://www.facebook.com/groups/1485577745254349/" target="_blank" rel="noopener" class="facebook-link pulse">PRZEJDŹ DO FORUM NA FACEBOOKU</a></p>
@@ -78,19 +96,6 @@
       <h2>Społeczność ma moc</h2>
       <p>Razem jesteśmy silniejsi – szczególnie gdy inwestycja napotyka wyzwania. Nie zawsze wszystko idzie zgodnie z planem, dlatego warto działać razem, wymieniać się informacjami i budować silną, świadomą społeczność mieszkańców.</p>
     </section>
-
-    <section>
-      <h2>Aktualności z budowy</h2>
-      <article>
-        <p class="data-update">Maj 2025</p>
-        <div class="gallery">
-          <img src="zdjecie1.jpg" alt="Postęp budowy Warszawska Sky - zdjęcie 1" class="gallery-item" />
-          <img src="zdjecie2.jpg" alt="Postęp budowy Warszawska Sky - zdjęcie 2" class="gallery-item" />
-          <img src="zdjecie3.jpg" alt="Postęp budowy Warszawska Sky - zdjęcie 3" class="gallery-item" />
-        </div>
-        <p>Trwają prace na elewacji klatki B oraz prace wykończeniowe wewnątrz budynku.</p>
-      </article>
-    </section>
   </main>
 
   <footer>
@@ -103,6 +108,7 @@
   </div>
 
   <script>
+    // Lightbox gallery
     document.querySelectorAll('.gallery-item').forEach(img => {
       img.addEventListener('click', e => {
         const lightbox = document.getElementById('lightbox');
@@ -115,7 +121,27 @@
     function closeLightbox() {
       document.getElementById('lightbox').style.display = 'none';
     }
+
+    // Google Maps initialization
+    function initMap() {
+      const location = { lat: 52.429, lng: 20.717 }; // Przykładowe współrzędne Nowego Dworu Mazowieckiego
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 14,
+        center: location,
+      });
+      const marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        title: "Warszawska Sky",
+      });
+    }
   </script>
+
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzjSqgDj-bPvdb-HbEZi4y0R9Pwg_aJfQ&callback=initMap"
+    async
+    defer
+  ></script>
 </body>
 
 </html>
