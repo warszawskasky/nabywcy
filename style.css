@@ -91,10 +91,45 @@ footer {
     font-style: italic;
 }
 
-section img {
-    width: 100%;
-    max-width: 600px;
+/* Galeria zdjęć - ułożenie obok siebie */
+.gallery {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap; /* na mniejszych ekranach zdjęcia przejdą pod siebie */
+}
+
+.gallery-item {
+    cursor: pointer;
+    width: calc((100% - 2em) / 3); /* trzy zdjęcia w rzędzie z odstępami */
     border-radius: 6px;
-    margin-bottom: 0.5em;
-    display: block;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox - pełnoekranowe powiększenie zdjęcia */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.6);
 }
