@@ -36,8 +36,8 @@ body {
 }
 
 header {
-    width: 100vw;
     max-width: 1920px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -168,4 +168,11 @@ footer {
     max-height: 90%;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(255,255,255,0.6);
+}
+
+/* Responsywność banera - mniejsza wysokość na telefonach */
+@media (max-width: 600px) {
+    header img.header-image {
+        height: 250px;
+    }
 }
