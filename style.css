@@ -96,5 +96,5 @@ section img {
     max-width: 600px;
     border-radius: 6px;
     margin-bottom: 0.5em;
+    display: block;
 }
-
