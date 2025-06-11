@@ -35,9 +35,9 @@ body {
     color: #333;
 }
 
-header img {
+header img.header-image {
     width: 100%;
-    max-height: 400px;
+    height: 500px; /* powiększone zdjęcie */
     object-fit: cover;
     display: block;
     margin-bottom: 1em;
@@ -91,16 +91,16 @@ footer {
     font-style: italic;
 }
 
-/* Nowa sekcja powitalna */
+/* Nowa sekcja powitalna - mniejsza i bardziej kompaktowa */
 .welcome-section {
     background: #e8f0fe;
-    padding: 1.5em 2em;
+    padding: 1em 1.5em;
     margin-bottom: 1.5em;
     border-radius: 6px;
-    font-size: 1.1em;
+    font-size: 0.9em; /* zmniejszona czcionka */
     color: #184bf2;
     box-shadow: 0 2px 6px rgba(24, 75, 242, 0.2);
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 /* Galeria zdjęć - ułożenie obok siebie */
