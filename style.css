@@ -1,3 +1,4 @@
+/* Reset box-sizing */
 *,
 *::before,
 *::after {
@@ -93,7 +94,49 @@ footer {
   line-height: 1.4;
 }
 
-/* Galeria zdjęć - ułożenie obok siebie z responsywnością */
+/* Link do Facebooka z animacją i stylami */
+.facebook-link {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #1877f2;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, box-shadow 0.6s ease;
+  box-shadow: 0 0 0 0 rgba(24, 119, 242, 0);
+}
+
+.facebook-link:hover,
+.facebook-link:focus {
+  background-color: #145dbf;
+  box-shadow: 0 0 8px 4px rgba(24, 119, 242, 0.7);
+  outline: none;
+}
+
+.facebook-link:active {
+  background-color: #0f3a8c;
+  box-shadow: none;
+}
+
+/* Pulsująca animacja */
+.facebook-link.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(24, 119, 242, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 10px 10px rgba(24, 119, 242, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(24, 119, 242, 0);
+  }
+}
+
+/* Galeria zdjęć */
 .gallery {
   display: flex;
   gap: 1em;
@@ -113,6 +156,7 @@ footer {
   transform: scale(1.05);
 }
 
+/* Responsywność galerii */
 @media (max-width: 900px) {
   .gallery-item {
     flex: 1 1 calc(50% - 1em);
@@ -127,7 +171,7 @@ footer {
   }
 }
 
-/* Lightbox - pełnoekranowe powiększenie zdjęcia */
+/* Lightbox */
 .lightbox {
   display: none;
   position: fixed;
@@ -151,7 +195,7 @@ footer {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
 
-/* Responsywność banera - mniejsza wysokość na telefonach */
+/* Responsywność banera */
 @media (max-width: 600px) {
   header img.header-image {
     max-height: 250px;
