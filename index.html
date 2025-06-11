@@ -12,10 +12,21 @@
 
 <body>
     <header>
-        <img src="header2_1920_400.png" alt="Zdjęcie Warszawskiej Sky" class="header-image" />
+        <img
+            src="header2_1920_400.jpg"
+            srcset="
+                header2_640_133.jpg 640w,
+                header2_1280_267.jpg 1280w,
+                header2_1920_400.jpg 1920w
+            "
+            sizes="(max-width: 640px) 100vw,
+                   (max-width: 1280px) 100vw,
+                   1920px"
+            alt="Zdjęcie Warszawskiej Sky"
+            class="header-image"
+        />
     </header>
 
-    <!-- Sekcja powitalna -->
     <section class="welcome-section container">
         <p>
             Cześć!<br />
@@ -92,7 +103,6 @@
         <p>Strona stworzona przez mieszkańców. Nie jesteśmy powiązani z BDC, HREIT ani innymi podmiotami formalnie zaangażowanymi w projekt.</p>
     </footer>
 
-    <!-- Lightbox modal -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <img id="lightbox-img" src="" alt="Powiększone zdjęcie" />
     </div>
