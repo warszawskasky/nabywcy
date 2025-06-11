@@ -91,6 +91,18 @@ footer {
     font-style: italic;
 }
 
+/* Nowa sekcja powitalna */
+.welcome-section {
+    background: #e8f0fe;
+    padding: 1.5em 2em;
+    margin-bottom: 1.5em;
+    border-radius: 6px;
+    font-size: 1.1em;
+    color: #184bf2;
+    box-shadow: 0 2px 6px rgba(24, 75, 242, 0.2);
+    line-height: 1.5;
+}
+
 /* Galeria zdjęć - ułożenie obok siebie */
 .gallery {
     display: flex;
