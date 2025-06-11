@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Warszawska Sky – Mieszkania i Forum Mieszkańców</title>
     <meta name="description" content="Nowa inwestycja Warszawska Sky w Nowym Dworze Mazowieckim. Sprawdź szczegóły, dołącz do społeczności mieszkańców i wymieniaj opinie o mieszkaniach, budowie i deweloperze." />
     <meta name="keywords" content="Warszawska Sky, Nowy Dwór Mazowiecki, mieszkania, inwestycja, forum mieszkańców, opinie, nowe mieszkania, deweloper HREIT, BDC, Sapota, budowa, dokumenty, odbiory" />
@@ -69,9 +69,11 @@
         <h2>Aktualności z budowy</h2>
         <article>
             <p class="data-update">11 czerwca 2025</p>
-            <img src="zdjecie1.jpg" alt="Postęp budowy Warszawska Sky - zdjęcie 1" />
-            <img src="zdjecie2.jpg" alt="Postęp budowy Warszawska Sky - zdjęcie 2" />
-            <img src="zdjecie3.jpg" alt="Postęp budowy Warszawska Sky - zdjęcie 3" />
+            <div class="gallery">
+                <img src="zdjecie1.jpg" alt="Postęp budowy Warszawska Sky - zdjęcie 1" class="gallery-item" />
+                <img src="zdjecie2.jpg" alt="Postęp budowy Warszawska Sky - zdjęcie 2" class="gallery-item" />
+                <img src="zdjecie3.jpg" alt="Postęp budowy Warszawska Sky - zdjęcie 3" class="gallery-item" />
+            </div>
             <p>Trwają prace wykończeniowe na pierwszym etapie inwestycji. Mieszkania są sukcesywnie odbierane przez nabywców.</p>
         </article>
     </section>
@@ -80,13 +82,26 @@
         <p>Strona stworzona przez mieszkańców. Nie jesteśmy powiązani z BDC, HREIT ani innymi podmiotami formalnie zaangażowanymi w projekt.</p>
     </footer>
 
+    <!-- Lightbox modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Powiększone zdjęcie" />
+    </div>
+
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const fbLink = document.querySelector('.facebook-link');
-            if (fbLink) {
-                fbLink.classList.add('pulse');
-            }
+        // Obsługa kliknięcia na miniaturę - otwarcie lightboxa
+        document.querySelectorAll('.gallery-item').forEach(img => {
+            img.addEventListener('click', e => {
+                const lightbox = document.getElementById('lightbox');
+                const lightboxImg = document.getElementById('lightbox-img');
+                lightboxImg.src = e.target.src;
+                lightbox.style.display = 'flex';
+            });
         });
+
+        // Zamknięcie lightboxa po kliknięciu w tło
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
     </script>
 </body>
 
