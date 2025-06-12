@@ -208,3 +208,15 @@ footer {
     max-height: 250px;
   }
 }
+.footer-policy-link {
+  color: #184bf2;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-policy-link:hover,
+.footer-policy-link:focus {
+  color: #0f357a;
+  outline: none;
+  text-decoration: none;
+}
