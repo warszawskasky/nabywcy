@@ -106,7 +106,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <img src="zdjecie5.jpg" alt="Postęp budowy Warszawska Sky - zdjęcie 5" class="gallery-item" />
               <img src="zdjecie6.jpg" alt="Postęp budowy Warszawska Sky - zdjęcie 6" class="gallery-item" />
             </div>
-            <p>W czerwcu kontynuowane są prace wykończeniowe w kolejnych klatkach.</p>
+            <p>W czerwcu kontynuowane są prace wykończeniowe w kolejnych klatkach oraz zagospodarowanie terenu wokół budynku.</p>
           </div>
         </div>
         <div class="accordion-item">
@@ -147,37 +147,77 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </p>
   </footer>
 
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <!-- Lightbox z nawigacją -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <button class="lightbox-arrow lightbox-arrow-left" onclick="prevImage(event)">&#8592;</button>
     <img id="lightbox-img" src="" alt="Powiększone zdjęcie" />
+    <button class="lightbox-arrow lightbox-arrow-right" onclick="nextImage(event)">&#8594;</button>
   </div>
 
   <script>
-    // Accordion logic
+    // Zbierz wszystkie zdjęcia z galerii
+    let allGalleryImages = [];
+    document.querySelectorAll('.gallery-item').forEach(img => {
+      allGalleryImages.push(img);
+    });
+    let currentIndex = 0;
+
+    // Otwieranie lightboxa
+    allGalleryImages.forEach((img, idx) => {
+      img.addEventListener('click', e => {
+        e.stopPropagation();
+        currentIndex = idx;
+        showImage();
+        document.getElementById('lightbox').style.display = 'flex';
+      });
+    });
+
+    function showImage() {
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = allGalleryImages[currentIndex].src;
+    }
+
+    // Zamknięcie lightboxa (klik poza zdjęciem lub strzałką)
+    function closeLightbox(e) {
+      if (!e || e.target.id === "lightbox" || e.target.classList.contains('lightbox-arrow')) {
+        document.getElementById('lightbox').style.display = 'none';
+      }
+    }
+
+    // Strzałka w lewo
+    function prevImage(e) {
+      e.stopPropagation();
+      currentIndex = (currentIndex - 1 + allGalleryImages.length) % allGalleryImages.length;
+      showImage();
+    }
+
+    // Strzałka w prawo
+    function nextImage(e) {
+      e.stopPropagation();
+      currentIndex = (currentIndex + 1) % allGalleryImages.length;
+      showImage();
+    }
+
+    // Obsługa strzałek na klawiaturze
+    document.addEventListener('keydown', function(e) {
+      const lightbox = document.getElementById('lightbox');
+      if (lightbox.style.display === 'flex') {
+        if (e.key === 'ArrowLeft') prevImage(e);
+        if (e.key === 'ArrowRight') nextImage(e);
+        if (e.key === 'Escape') lightbox.style.display = 'none';
+      }
+    });
+
+    // Akordeon
     document.querySelectorAll('.accordion-header').forEach(header => {
       header.addEventListener('click', function() {
         const item = this.parentElement;
-        // Zamknij inne
         document.querySelectorAll('.accordion-item').forEach(i => {
           if(i !== item) i.classList.remove('active');
         });
-        // Przełącz kliknięty
         item.classList.toggle('active');
       });
     });
-
-    // Lightbox
-    document.querySelectorAll('.gallery-item').forEach(img => {
-      img.addEventListener('click', e => {
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        lightboxImg.src = e.target.src;
-        lightbox.style.display = 'flex';
-      });
-    });
-
-    function closeLightbox() {
-      document.getElementById('lightbox').style.display = 'none';
-    }
   </script>
 </body>
 </html>
