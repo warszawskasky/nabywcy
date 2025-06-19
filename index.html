@@ -74,7 +74,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <section>
       <h2>Gdzie powstaje osiedle Warszawska Sky</h2>
-      <p>Inwestycja <strong>Warszawska Sky</strong> powstaje przy ul. Warszawskiej, w jednej z najlepiej rozwiniętych części <strong>Nowego Dworu Mazowieckiego</strong>. To idealne miejsce dla rodzin, par oraz osób szukających spokoju blisko natury i doskonałej komunikacji z Warszawą. Osiedle budowane jest przez dewelopera BDC należącego do grupy HREIT.</p>
+      <p>Inwestycja <strong>Warszawska Sky</strong> powstaje przy ul. Warszawskiej, innowacyjnej części <strong>Nowego Dworu Mazowieckiego</strong>. To idealne miejsce dla rodzin, par oraz osób szukających spokoju blisko natury i doskonałej komunikacji z Warszawą. Osiedle budowane jest przez dewelopera BDC należącego do grupy HREIT.</p>
       <ul>
         <li>20 minut do Warszawy</li>
         <li>Plaża, park, pływalnia – kilka minut spacerem</li>
@@ -97,18 +97,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <section>
       <h2>Aktualności z budowy</h2>
-      <article>
-        <p class="data-update">Maj 2025</p>
-        <div class="gallery">
-          <img src="zdjecie1.jpg" alt="Postęp budowy Warszawska Sky - zdjęcie 1" class="gallery-item" />
-          <img src="zdjecie2.jpg" alt="Postęp budowy Warszawska Sky - zdjęcie 2" class="gallery-item" />
-          <img src="zdjecie3.jpg" alt="Postęp budowy Warszawska Sky - zdjęcie 3" class="gallery-item" />
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-header">Czerwiec 2025</button>
+          <div class="accordion-content">
+            <div class="gallery">
+              <img src="zdjecie4.jpg" alt="Postęp budowy Warszawska Sky - zdjęcie 4" class="gallery-item" />
+              <img src="zdjecie5.jpg" alt="Postęp budowy Warszawska Sky - zdjęcie 5" class="gallery-item" />
+              <img src="zdjecie6.jpg" alt="Postęp budowy Warszawska Sky - zdjęcie 6" class="gallery-item" />
+            </div>
+            <p>W czerwcu kontynuowane są prace wykończeniowe w kolejnych klatkach.</p>
+          </div>
         </div>
-        <p>Trwają prace na elewacji klatki B oraz prace wykończeniowe wewnątrz budynku.</p>
-      </article>
+        <div class="accordion-item">
+          <button class="accordion-header">Maj 2025</button>
+          <div class="accordion-content">
+            <div class="gallery">
+              <img src="zdjecie1.jpg" alt="Postęp budowy Warszawska Sky - zdjęcie 1" class="gallery-item" />
+              <img src="zdjecie2.jpg" alt="Postęp budowy Warszawska Sky - zdjęcie 2" class="gallery-item" />
+              <img src="zdjecie3.jpg" alt="Postęp budowy Warszawska Sky - zdjęcie 3" class="gallery-item" />
+            </div>
+            <p>Trwają prace na elewacji klatki B oraz prace wykończeniowe wewnątrz budynku.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Dodajemy mapę tutaj, na końcu main -->
     <section>
       <h2>Lokalizacja inwestycji</h2>
       <div class="map-container">
@@ -133,12 +147,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </p>
   </footer>
 
-  <!-- Lightbox modal -->
   <div id="lightbox" class="lightbox" onclick="closeLightbox()">
     <img id="lightbox-img" src="" alt="Powiększone zdjęcie" />
   </div>
 
   <script>
+    // Accordion logic
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', function() {
+        const item = this.parentElement;
+        // Zamknij inne
+        document.querySelectorAll('.accordion-item').forEach(i => {
+          if(i !== item) i.classList.remove('active');
+        });
+        // Przełącz kliknięty
+        item.classList.toggle('active');
+      });
+    });
+
+    // Lightbox
     document.querySelectorAll('.gallery-item').forEach(img => {
       img.addEventListener('click', e => {
         const lightbox = document.getElementById('lightbox');
