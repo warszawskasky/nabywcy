@@ -1,75 +1,206 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>Test Akordeonu</title>
-    <style>
-        body { font-family: sans-serif; padding: 20px; }
-        .accordion-section {
-            border: 1px solid #ccc;
-            margin-bottom: 10px;
-            border-radius: 5px;
-        }
-        .accordion-title {
-            background: #f0f0f0;
-            padding: 15px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-        }
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            padding: 0 15px;
-        }
-        .accordion-content p {
-            padding: 15px 0;
-        }
-        button {
-            padding: 5px 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Polityka Cookies, Prywatności i Regulamin – Warszawska Sky Mieszkańcy</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .accordion-section {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+      padding: 15px 20px;
+    }
+    .accordion-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease-out;
+      margin-top: 10px;
+    }
+    .read-more-btn {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-left: 20px;
+    }
+    .read-more-btn:hover {
+      background-color: #005fa3;
+    }
+    h3 { color: #333; }
+    ul { padding-left: 20px; }
+    a { color: #0077cc; }
+  </style>
 </head>
 <body>
+<main class="container">
+  <h1>Polityka Cookies, Prywatności i Regulamin</h1>
 
-    <h1>Test Akordeonu</h1>
-    <p>Kliknij przycisk poniżej, aby rozwinąć treść.</p>
-
-    <div class="accordion-section">
-        <div class="accordion-title">
-            <span>Długa sekcja do rozwinięcia</span>
-            <button class="read-more-btn">Czytaj dalej</button>
-        </div>
-        <div class="accordion-content">
-            <p>To jest pierwszy paragraf. Jeśli go widzisz, to znaczy, że rozwijanie działa. Musimy sprawdzić, czy cała treść jest widoczna, nawet jeśli jest bardzo długa.</p>
-            <p>To jest drugi, dłuższy paragraf. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p>A to trzeci, końcowy paragraf. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Jeśli widzisz ten tekst, test zakończył się sukcesem.</p>
-        </div>
+  <!-- Polityka Cookies -->
+  <div class="accordion-section">
+    <div class="accordion-title">
+      Polityka Cookies
+      <button class="read-more-btn">Czytaj dalej</button>
     </div>
+    <div class="accordion-content">
+      <p>Niniejsza polityka cookies określa zasady stosowania plików cookies na stronie internetowej "Warszawska Sky Mieszkańcy" dostępnej pod adresem: https://warszawskaskymieszkancy.pl (dalej: "Strona").</p>
+      <h3>1. Czym są pliki cookies?</h3>
+      <p>Cookies to niewielkie pliki tekstowe zapisywane na urządzeniu końcowym użytkownika (np. komputerze, smartfonie). Służą m.in. do analizy ruchu, poprawy jakości usług, dopasowania treści i reklam.</p>
+      <h3>2. Rodzaje wykorzystywanych cookies</h3>
+      <ul>
+        <li><strong>Niezbędne</strong> – umożliwiają prawidłowe działanie strony, nie można ich wyłączyć.</li>
+        <li><strong>Analityczne</strong> – zbierają anonimowe dane statystyczne (Google Analytics 4).</li>
+        <li><strong>Marketingowe</strong> – do personalizacji reklam (Google Ads), tylko po zgodzie.</li>
+      </ul>
+      <h3>3. Cel stosowania cookies</h3>
+      <ul>
+        <li>Zapewnienie działania funkcjonalności</li>
+        <li>Tworzenie statystyk i analiz</li>
+        <li>Wyświetlanie dopasowanych reklam</li>
+      </ul>
+      <h3>4. Zarządzanie plikami cookies</h3>
+      <ul>
+        <li>Baner zgody (CookieYes)</li>
+        <li>Ustawienia przeglądarki</li>
+      </ul>
+      <h3>5. Narzędzia zewnętrzne</h3>
+      <ul>
+        <li>Google Analytics 4</li>
+        <li>Google Ads</li>
+        <li>CookieYes</li>
+      </ul>
+      <h3>6. Czas przechowywania</h3>
+      <ul>
+        <li>Cookies sesyjne – do zamknięcia przeglądarki</li>
+        <li>Cookies trwałe – do 12 miesięcy</li>
+      </ul>
+    </div>
+  </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const section = document.querySelector('.accordion-section');
-            const btn = section.querySelector('.read-more-btn');
-            const content = section.querySelector('.accordion-content');
+  <!-- Polityka Prywatności -->
+  <div class="accordion-section">
+    <div class="accordion-title">
+      Polityka Prywatności
+      <button class="read-more-btn">Czytaj dalej</button>
+    </div>
+    <div class="accordion-content">
+      <p>Szanujemy prywatność użytkowników odwiedzających stronę <strong>warszawskaskymieszkancy.pl</strong>. Niniejsza polityka zawiera informacje o danych zbieranych automatycznie oraz przetwarzaniu zgodnie z RODO i innymi przepisami.</p>
+      <h3>1. Administrator danych</h3>
+      <p>Strona prowadzona jest nieformalnie przez mieszkańców. Kontakt: <a href="mailto:warszawskaskykupujacy@gmail.com">warszawskaskykupujacy@gmail.com</a></p>
+      <h3>2. Zakres danych</h3>
+      <ul>
+        <li>Adres IP (zmaskowany), typ przeglądarki, system, czas wizyty</li>
+        <li>Dane o interakcjach z reklamami Google</li>
+        <li>Informacje o zgodach (CookieYes)</li>
+      </ul>
+      <p>Brak rejestracji użytkowników i formularzy kontaktowych.</p>
+      <h3>3. Cele</h3>
+      <ul>
+        <li>Statystyki odwiedzin (GA4)</li>
+        <li>Personalizacja reklam (Google Ads)</li>
+        <li>Bezpieczeństwo działania strony</li>
+        <li>Zarządzanie zgodami</li>
+      </ul>
+      <h3>4. Podstawy prawne</h3>
+      <ul>
+        <li>Art. 6 ust. 1 lit. a RODO – zgoda</li>
+        <li>Art. 6 ust. 1 lit. f RODO – uzasadniony interes administratora</li>
+      </ul>
+      <h3>5. Odbiorcy</h3>
+      <ul>
+        <li>Google Ireland Ltd.</li>
+        <li>CookieYes Ltd.</li>
+        <li>Dostawca hostingu (GitHub Pages)</li>
+      </ul>
+      <h3>6. Przekazywanie danych poza EOG</h3>
+      <p>Dane Google mogą być przekazywane do USA lub innych krajów trzecich na podstawie standardowych klauzul umownych.</p>
+      <h3>7. Okres przechowywania</h3>
+      <ul>
+        <li>Dane GA – do 26 miesięcy</li>
+        <li>Cookies – do 12 miesięcy</li>
+        <li>Logi serwera – do 30 dni</li>
+      </ul>
+      <h3>8. Prawa użytkownika</h3>
+      <ul>
+        <li>Prawo dostępu, sprostowania, usunięcia</li>
+        <li>Prawo ograniczenia przetwarzania i do przenoszenia</li>
+        <li>Prawo sprzeciwu</li>
+        <li>Prawo skargi do PUODO</li>
+      </ul>
+      <h3>9. Zmiany</h3>
+      <p>Polityka może być aktualizowana – nowa wersja publikowana jest na stronie wraz z datą wejścia.</p>
+    </div>
+  </div>
 
-            btn.addEventListener('click', () => {
-                const isOpen = content.classList.contains('open');
+  <!-- Regulamin -->
+  <div class="accordion-section">
+    <div class="accordion-title">
+      Regulamin Strony
+      <button class="read-more-btn">Czytaj dalej</button>
+    </div>
+    <div class="accordion-content">
+      <h3>1. Informacje ogólne</h3>
+      <ul>
+        <li>Serwis nieoficjalny, tworzony przez mieszkańców</li>
+        <li>Brak powiązań z deweloperem</li>
+      </ul>
+      <h3>2. Zasady korzystania</h3>
+      <ul>
+        <li>Brak logowania, dostęp bezpłatny</li>
+        <li>Zakaz treści niezgodnych z prawem</li>
+        <li>Link do grupy FB zamieszczony zgodnie z regulaminem</li>
+      </ul>
+      <h3>3. Treści i odpowiedzialność</h3>
+      <ul>
+        <li>Materiały mają charakter informacyjny/publicystyczny</li>
+        <li>Administratorzy nie odpowiadają za decyzje użytkowników</li>
+        <li>Brak odpowiedzialności za treści zewnętrzne (FB, mapy Google)</li>
+      </ul>
+      <h3>4. Zmiany i kontakt</h3>
+      <p>Regulamin może ulec zmianie. Kontakt: <a href="mailto:warszawskaskykupujacy@gmail.com">warszawskaskykupujacy@gmail.com</a></p>
+    </div>
+  </div>
 
-                if (isOpen) {
-                    content.style.maxHeight = null;
-                    content.classList.remove('open');
-                    btn.textContent = 'Czytaj dalej';
-                } else {
-                    content.classList.add('open');
-                    content.style.maxHeight = content.scrollHeight + 'px';
-                    btn.textContent = 'Zwiń';
-                }
-            });
-        });
-    </script>
+  <div style="text-align:center; margin-top:30px;">
+    <a href="index.html" class="back-home-btn">Powrót do strony głównej</a>
+  </div>
+
+</main>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.accordion-section').forEach(section => {
+    const btn = section.querySelector('.read-more-btn');
+    const content = section.querySelector('.accordion-content');
+
+    btn.addEventListener('click', () => {
+      const isOpen = content.classList.contains('open');
+
+      if (isOpen) {
+        content.style.maxHeight = null;
+        content.classList.remove('open');
+        btn.textContent = 'Czytaj dalej';
+      } else {
+        content.classList.add('open');
+        content.style.maxHeight = content.scrollHeight + 'px';
+        btn.textContent = 'Zwiń';
+      }
+    });
+  });
+});
+</script>
 
 </body>
 </html>
