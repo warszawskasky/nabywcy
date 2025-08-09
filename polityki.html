@@ -1,254 +1,75 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Polityka Cookies, Prywatności i Regulamin – Warszawska Sky Mieszkańcy</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .accordion-section {
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      margin-bottom: 20px;
-      padding: 15px 20px;
-    }
-    .accordion-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      cursor: pointer;
-      user-select: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .accordion-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease-out; /* Poprawiona animacja */
-      margin-top: 10px;
-    }
-    /* USUNIĘTO BŁĘDNĄ LINIJKĘ Z max-height: 2000px */
-    .read-more-btn {
-      background-color: #0077cc;
-      color: white;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 0.9rem;
-      user-select: none;
-      margin-left: 20px;
-    }
-    .read-more-btn:hover {
-      background-color: #005fa3;
-    }
-    .back-home-btn {
-      display: inline-block;
-      background: #0077cc;
-      color: #fff;
-      padding: 10px 24px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 500;
-      margin: 30px 0;
-      transition: background 0.2s;
-    }
-    .back-home-btn:hover {
-      background: #005fa3;
-    }
-    h3 {
-      color: #333;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    a {
-      color: #0077cc;
-    }
-    @media (max-width: 600px) {
-      .accordion-title {
-        font-size: 1.1rem;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5em;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Test Akordeonu</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .accordion-section {
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .accordion-title {
+            background: #f0f0f0;
+            padding: 15px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 15px;
+        }
+        .accordion-content p {
+            padding: 15px 0;
+        }
+        button {
+            padding: 5px 10px;
+        }
+    </style>
 </head>
 <body>
-  <main class="container">
-    <h1>Polityka Cookies, Prywatności i Regulamin</h1>
 
-    <div id="accordion-container">
+    <h1>Test Akordeonu</h1>
+    <p>Kliknij przycisk poniżej, aby rozwinąć treść.</p>
 
-      <!-- Polityka Cookies -->
-      <div class="accordion-section">
+    <div class="accordion-section">
         <div class="accordion-title">
-          Polityka Cookies
-          <button class="read-more-btn">Czytaj dalej</button>
+            <span>Długa sekcja do rozwinięcia</span>
+            <button class="read-more-btn">Czytaj dalej</button>
         </div>
         <div class="accordion-content">
-          <p>Niniejsza polityka cookies określa zasady stosowania plików cookies na stronie internetowej "Warszawska Sky Mieszkańcy" dostępnej pod adresem: https://warszawskaskymieszkancy.pl (dalej: "Strona").</p>
-          <h3>1. Czym są pliki cookies?</h3>
-          <p>Cookies to niewielkie pliki tekstowe zapisywane na urządzeniu końcowym użytkownika (np. komputerze, smartfonie). Służą one m.in. do analizy ruchu, poprawy jakości usług, dopasowania treści i reklam do preferencji użytkownika.</p>
-          <h3>2. Rodzaje wykorzystywanych cookies</h3>
-          <ul>
-            <li><strong>Niezbędne</strong> – umożliwiają prawidłowe działanie strony, nie można ich wyłączyć.</li>
-            <li><strong>Analityczne</strong> – zbierają anonimowe dane statystyczne (np. poprzez Google Analytics 4).</li>
-            <li><strong>Marketingowe</strong> – wykorzystywane do personalizacji reklam (np. Google Ads), stosowane wyłącznie po wyrażeniu zgody.</li>
-          </ul>
-          <h3>3. Cel stosowania cookies</h3>
-          <ul>
-            <li>Zapewnienie działania funkcjonalności strony</li>
-            <li>Tworzenie anonimowych statystyk i analiz</li>
-            <li>Wyświetlanie dopasowanych treści reklamowych</li>
-          </ul>
-          <h3>4. Zarządzanie plikami cookies</h3>
-          <p>Użytkownik może zarządzać plikami cookies poprzez:</p>
-          <ul>
-            <li>Baner zgody (CookieYes)</li>
-            <li>Ustawienia przeglądarki (blokowanie, usuwanie)</li>
-          </ul>
-          <h3>5. Narzędzia zewnętrzne</h3>
-          <ul>
-            <li>Google Analytics 4 (anonimizacja IP, analiza statystyk)</li>
-            <li>Google Ads (remarketing i reklamy kontekstowe)</li>
-            <li>CookieYes – system zarządzania zgodami (zgodny z RODO)</li>
-          </ul>
-          <h3>6. Czas przechowywania</h3>
-          <ul>
-            <li>Cookies sesyjne – do czasu zamknięcia przeglądarki</li>
-            <li>Cookies trwałe – maksymalnie 12 miesięcy</li>
-          </ul>
+            <p>To jest pierwszy paragraf. Jeśli go widzisz, to znaczy, że rozwijanie działa. Musimy sprawdzić, czy cała treść jest widoczna, nawet jeśli jest bardzo długa.</p>
+            <p>To jest drugi, dłuższy paragraf. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>A to trzeci, końcowy paragraf. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Jeśli widzisz ten tekst, test zakończył się sukcesem.</p>
         </div>
-      </div>
-
-      <!-- Polityka Prywatności -->
-      <div class="accordion-section">
-        <div class="accordion-title">
-          Polityka Prywatności
-          <button class="read-more-btn">Czytaj dalej</button>
-        </div>
-        <div class="accordion-content">
-          <p>Szanujemy prywatność użytkowników odwiedzających stronę internetową <strong>warszawskaskymieszkancy.pl</strong>. Niniejsza polityka prywatności zawiera informacje na temat danych, jakie są zbierane automatycznie oraz warunków ich przetwarzania zgodnie z RODO oraz innymi obowiązującymi przepisami.</p>
-          <h3>1. Administrator danych osobowych</h3>
-          <p>Strona jest prowadzona nieformalnie przez grupę mieszkańców osiedla Warszawska Sky. Ze względu na brak formalnej struktury organizacyjnej i brak przetwarzania danych osobowych w sposób umożliwiający identyfikację osoby fizycznej, nie wyznaczono jednego administratora danych. Kontakt możliwy jest pod adresem: <a href="mailto:warszawskaskykupujacy@gmail.com">warszawskaskykupujacy@gmail.com</a>.</p>
-          <h3>2. Zakres zbieranych danych</h3>
-          <ul>
-            <li>Dane zbierane automatycznie – adres IP (zmaskowany), typ przeglądarki, system operacyjny, czas wizyty, źródło wejścia</li>
-            <li>Dane dotyczące interakcji z reklamami Google</li>
-            <li>Informacje o zgodach udzielonych przez użytkownika w banerze CookieYes</li>
-          </ul>
-          <p>Strona nie prowadzi rejestracji użytkowników, formularzy kontaktowych, newsletterów ani nie umożliwia dodawania komentarzy. Nie są zbierane dane w sposób umożliwiający identyfikację konkretnej osoby.</p>
-          <h3>3. Cele przetwarzania danych</h3>
-          <ul>
-            <li>Tworzenie anonimowych statystyk odwiedzin (Google Analytics 4)</li>
-            <li>Personalizacja treści reklamowych (Google Ads – remarketing, kampanie kontekstowe)</li>
-            <li>Zapewnienie bezpieczeństwa działania strony (logi serwera GitHub Pages)</li>
-            <li>Zarządzanie zgodami użytkownika (CookieYes)</li>
-          </ul>
-          <h3>4. Podstawy prawne przetwarzania</h3>
-          <ul>
-            <li><strong>Art. 6 ust. 1 lit. a RODO</strong> – zgoda użytkownika na cookies analityczne i marketingowe</li>
-            <li><strong>Art. 6 ust. 1 lit. f RODO</strong> – uzasadniony interes administratora, tj. poprawa jakości strony, analiza statystyk, bezpieczeństwo</li>
-          </ul>
-          <h3>5. Odbiorcy danych</h3>
-          <ul>
-            <li>Google Ireland Ltd. – dostawca usług Google Analytics oraz Google Ads</li>
-            <li>CookieYes Ltd. – narzędzie do zarządzania zgodami (zgodne z RODO)</li>
-            <li>Dostawcy hostingu (GitHub Pages) – w zakresie logów technicznych</li>
-          </ul>
-          <h3>6. Przekazywanie danych poza Europejski Obszar Gospodarczy (EOG)</h3>
-          <p>Dane zbierane przez Google Analytics oraz Google Ads mogą być przekazywane do USA lub innych krajów trzecich. W takich przypadkach dane są przekazywane na podstawie standardowych klauzul umownych zatwierdzonych przez Komisję Europejską.</p>
-          <h3>7. Okres przechowywania danych</h3>
-          <ul>
-            <li>Dane w Google Analytics – do 26 miesięcy</li>
-            <li>Dane cookies – zgodnie z ustawieniami banera CookieYes (maksymalnie 12 miesięcy)</li>
-            <li>Dane logów serwera – do 30 dni (w zależności od polityki GitHub Pages)</li>
-          </ul>
-          <h3>8. Prawa użytkownika</h3>
-          <p>Użytkownikowi przysługują następujące prawa (o ile mają zastosowanie):</p>
-          <ul>
-            <li>Prawo dostępu do danych</li>
-            <li>Prawo do sprostowania danych</li>
-            <li>Prawo do usunięcia danych („prawo do bycia zapomnianym”)</li>
-            <li>Prawo do ograniczenia przetwarzania</li>
-            <li>Prawo do przenoszenia danych</li>
-            <li>Prawo do sprzeciwu wobec przetwarzania</li>
-            <li>Prawo do wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (PUODO)</li>
-          </ul>
-          <p>Jednakże, ze względu na brak identyfikacji użytkownika, realizacja niektórych z powyższych praw może być niemożliwa.</p>
-          <h3>9. Zmiany w polityce prywatności</h3>
-          <p>Polityka może być aktualizowana w przypadku zmian w sposobie działania strony, narzędzi analitycznych lub przepisów prawa. Zaktualizowana wersja będzie publikowana na stronie wraz z datą wejścia w życie.</p>
-        </div>
-      </div>
-
-      <!-- Regulamin Strony -->
-      <div class="accordion-section">
-        <div class="accordion-title">
-          Regulamin Strony
-          <button class="read-more-btn">Czytaj dalej</button>
-        </div>
-        <div class="accordion-content">
-          <h3>1. Informacje ogólne</h3>
-          <ul>
-            <li>Witryna "Warszawska Sky Mieszkańcy" (https://warszawskaskymieszkancy.pl) jest nieoficjalnym serwisem tworzonym przez mieszkańców osiedla Warszawska Sky.</li>
-            <li>Strona nie jest związana z deweloperem ani podmiotami komercyjnymi.</li>
-          </ul>
-          <h3>2. Zasady korzystania</h3>
-          <ul>
-            <li>Strona jest dostępna bezpłatnie i nie wymaga logowania.</li>
-            <li>Użytkownicy zobowiązani są do przestrzegania prawa oraz zasad dobrego współżycia społecznego.</li>
-            <li>Link do grupy na Facebooku został zamieszczony zgodnie z zasadami tego portalu.</li>
-          </ul>
-          <h3>3. Treści i odpowiedzialność</h3>
-          <ul>
-            <li>Publikowane materiały mają charakter informacyjny lub publicystyczny.</li>
-            <li>Administratorzy nie ponoszą odpowiedzialności za decyzje podejmowane na podstawie zamieszczonych treści.</li>
-            <li>Nie ponosimy odpowiedzialności za treści zewnętrzne (np. grupa na Facebooku, mapy Google).</li>
-          </ul>
-          <h3>4. Zmiany i kontakt</h3>
-          <p>Regulamin może być zmieniony w dowolnym czasie. Aktualna wersja dostępna jest zawsze na stronie. Kontakt z zespołem możliwy jest pod adresem: <a href="mailto:warszawskaskykupujacy@gmail.com">warszawskaskykupujacy@gmail.com</a></p>
-        </div>
-      </div>
     </div>
 
-    <div style="text-align:center;">
-      <a href="index.html" class="back-home-btn">Powrót do strony głównej</a>
-    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const section = document.querySelector('.accordion-section');
+            const btn = section.querySelector('.read-more-btn');
+            const content = section.querySelector('.accordion-content');
 
-  </main>
-  
-  <script>
-    document.querySelectorAll('.accordion-section').forEach(section => {
-      const btn = section.querySelector('.read-more-btn');
-      const content = section.querySelector('.accordion-content');
+            btn.addEventListener('click', () => {
+                const isOpen = content.classList.contains('open');
 
-      btn.addEventListener('click', () => {
-        const isOpen = content.classList.contains('open');
-        
-        if (isOpen) {
-          // Zamykanie
-          content.style.maxHeight = null;
-          content.classList.remove('open');
-          btn.textContent = 'Czytaj dalej';
-        } else {
-          // Otwieranie
-          content.classList.add('open');
-          content.style.maxHeight = content.scrollHeight + 'px';
-          btn.textContent = 'Zwiń';
-        }
-      });
-    });
+                if (isOpen) {
+                    content.style.maxHeight = null;
+                    content.classList.remove('open');
+                    btn.textContent = 'Czytaj dalej';
+                } else {
+                    content.classList.add('open');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    btn.textContent = 'Zwiń';
+                }
+            });
+        });
+    </script>
 
-    // Dodatkowo: dopasuj wysokość przy zmianie rozmiaru okna
-    window.addEventListener('resize', () => {
-      document.querySelectorAll('.accordion-content.open').forEach(content => {
-        content.style.maxHeight = content.scrollHeight + 'px';
-      });
-    });
-  </script>
 </body>
 </html>
