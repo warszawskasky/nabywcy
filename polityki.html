@@ -16,8 +16,6 @@
     .accordion-title {
       font-size: 1.5rem;
       font-weight: 700;
-      cursor: pointer;
-      user-select: none;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -25,11 +23,8 @@
     .accordion-content {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.3s ease;
+      transition: max-height 0.4s cubic-bezier(.4,0,.2,1);
       margin-top: 10px;
-    }
-    .accordion-content.open {
-      max-height: 2000px;
     }
     .read-more-btn {
       background-color: #0077cc;
@@ -45,15 +40,24 @@
     .read-more-btn:hover {
       background-color: #005fa3;
     }
-    h3 {
-      color: #333;
+    .back-home-btn {
+      display: inline-block;
+      background: #0077cc;
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin: 30px 0;
+      transition: background 0.2s;
     }
-    ul {
-      padding-left: 20px;
+    .back-home-btn:hover {
+      background: #005fa3;
     }
-    a {
-      color: #0077cc;
-    }
+    h3 { color: #333; }
+    ul { padding-left: 20px; }
+    a { color: #0077cc; }
     @media (max-width: 600px) {
       .accordion-title {
         font-size: 1.1rem;
@@ -70,6 +74,7 @@
 
     <div id="accordion-container">
 
+      <!-- Polityka Cookies -->
       <div class="accordion-section">
         <div class="accordion-title">
           Polityka Cookies
@@ -111,6 +116,7 @@
         </div>
       </div>
 
+      <!-- Polityka Prywatności -->
       <div class="accordion-section">
         <div class="accordion-title">
           Polityka Prywatności
@@ -170,6 +176,7 @@
         </div>
       </div>
 
+      <!-- Regulamin Strony -->
       <div class="accordion-section">
         <div class="accordion-title">
           Regulamin Strony
@@ -199,7 +206,12 @@
       </div>
 
     </div>
+
+    <div style="text-align:center;">
+      <a href="index.html" class="back-home-btn">Powrót do strony głównej</a>
+    </div>
   </main>
+
   <script>
     document.querySelectorAll('.accordion-section').forEach(section => {
       const btn = section.querySelector('.read-more-btn');
@@ -207,12 +219,20 @@
       btn.addEventListener('click', () => {
         const isOpen = content.classList.contains('open');
         if (isOpen) {
+          content.style.maxHeight = null;
           content.classList.remove('open');
           btn.textContent = 'Czytaj dalej';
         } else {
           content.classList.add('open');
+          content.style.maxHeight = content.scrollHeight + "px";
           btn.textContent = 'Zwiń';
         }
+      });
+    });
+    // Reset max-height on window resize for responsive content
+    window.addEventListener('resize', () => {
+      document.querySelectorAll('.accordion-content.open').forEach(content => {
+        content.style.maxHeight = content.scrollHeight + "px";
       });
     });
   </script>
