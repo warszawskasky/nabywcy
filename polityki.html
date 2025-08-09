@@ -23,9 +23,10 @@
     .accordion-content {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.4s cubic-bezier(.4,0,.2,1);
+      transition: max-height 0.3s ease;
       margin-top: 10px;
     }
+    /* NIE USTAWIAMY JUŻ ŻADNEGO max-height W .open! */
     .read-more-btn {
       background-color: #0077cc;
       color: white;
@@ -74,7 +75,6 @@
 
     <div id="accordion-container">
 
-      <!-- Polityka Cookies -->
       <div class="accordion-section">
         <div class="accordion-title">
           Polityka Cookies
@@ -116,7 +116,6 @@
         </div>
       </div>
 
-      <!-- Polityka Prywatności -->
       <div class="accordion-section">
         <div class="accordion-title">
           Polityka Prywatności
@@ -176,7 +175,6 @@
         </div>
       </div>
 
-      <!-- Regulamin Strony -->
       <div class="accordion-section">
         <div class="accordion-title">
           Regulamin Strony
@@ -206,32 +204,29 @@
       </div>
 
     </div>
-
     <div style="text-align:center;">
       <a href="index.html" class="back-home-btn">Powrót do strony głównej</a>
     </div>
   </main>
-
   <script>
     document.querySelectorAll('.accordion-section').forEach(section => {
       const btn = section.querySelector('.read-more-btn');
       const content = section.querySelector('.accordion-content');
       btn.addEventListener('click', () => {
         const isOpen = content.classList.contains('open');
-        if (isOpen) {
+        if(isOpen){
           content.style.maxHeight = null;
           content.classList.remove('open');
           btn.textContent = 'Czytaj dalej';
         } else {
           content.classList.add('open');
-          content.style.maxHeight = content.scrollHeight + "px";
+          content.style.maxHeight = content.scrollHeight + 'px';
           btn.textContent = 'Zwiń';
         }
       });
     });
-    // Reset max-height on window resize for responsive content
-    window.addEventListener('resize', () => {
-      document.querySelectorAll('.accordion-content.open').forEach(content => {
+    window.addEventListener('resize', function() {
+      document.querySelectorAll('.accordion-content.open').forEach(function(content) {
         content.style.maxHeight = content.scrollHeight + "px";
       });
     });
