@@ -16,6 +16,8 @@
     .accordion-title {
       font-size: 1.5rem;
       font-weight: 700;
+      cursor: pointer;
+      user-select: none;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -26,7 +28,9 @@
       transition: max-height 0.3s ease;
       margin-top: 10px;
     }
-    /* NIE USTAWIAMY JUŻ ŻADNEGO max-height W .open! */
+    .accordion-content.open {
+      max-height: 2000px;
+    }
     .read-more-btn {
       background-color: #0077cc;
       color: white;
@@ -41,24 +45,15 @@
     .read-more-btn:hover {
       background-color: #005fa3;
     }
-    .back-home-btn {
-      display: inline-block;
-      background: #0077cc;
-      color: #fff;
-      padding: 10px 24px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 500;
-      margin: 30px 0;
-      transition: background 0.2s;
+    h3 {
+      color: #333;
     }
-    .back-home-btn:hover {
-      background: #005fa3;
+    ul {
+      padding-left: 20px;
     }
-    h3 { color: #333; }
-    ul { padding-left: 20px; }
-    a { color: #0077cc; }
+    a {
+      color: #0077cc;
+    }
     @media (max-width: 600px) {
       .accordion-title {
         font-size: 1.1rem;
@@ -204,9 +199,6 @@
       </div>
 
     </div>
-    <div style="text-align:center;">
-      <a href="index.html" class="back-home-btn">Powrót do strony głównej</a>
-    </div>
   </main>
   <script>
     document.querySelectorAll('.accordion-section').forEach(section => {
@@ -214,20 +206,13 @@
       const content = section.querySelector('.accordion-content');
       btn.addEventListener('click', () => {
         const isOpen = content.classList.contains('open');
-        if(isOpen){
-          content.style.maxHeight = null;
+        if (isOpen) {
           content.classList.remove('open');
           btn.textContent = 'Czytaj dalej';
         } else {
           content.classList.add('open');
-          content.style.maxHeight = content.scrollHeight + 'px';
           btn.textContent = 'Zwiń';
         }
-      });
-    });
-    window.addEventListener('resize', function() {
-      document.querySelectorAll('.accordion-content.open').forEach(function(content) {
-        content.style.maxHeight = content.scrollHeight + "px";
       });
     });
   </script>
