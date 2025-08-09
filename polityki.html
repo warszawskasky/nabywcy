@@ -25,12 +25,10 @@
     .accordion-content {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.3s ease;
+      transition: max-height 0.4s ease-out; /* Poprawiona animacja */
       margin-top: 10px;
     }
-    .accordion-content.open {
-      max-height: 2000px;
-    }
+    /* USUNIĘTO BŁĘDNĄ LINIJKĘ Z max-height: 2000px */
     .read-more-btn {
       background-color: #0077cc;
       color: white;
@@ -44,6 +42,21 @@
     }
     .read-more-btn:hover {
       background-color: #005fa3;
+    }
+    .back-home-btn {
+      display: inline-block;
+      background: #0077cc;
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin: 30px 0;
+      transition: background 0.2s;
+    }
+    .back-home-btn:hover {
+      background: #005fa3;
     }
     h3 {
       color: #333;
@@ -70,6 +83,7 @@
 
     <div id="accordion-container">
 
+      <!-- Polityka Cookies -->
       <div class="accordion-section">
         <div class="accordion-title">
           Polityka Cookies
@@ -111,6 +125,7 @@
         </div>
       </div>
 
+      <!-- Polityka Prywatności -->
       <div class="accordion-section">
         <div class="accordion-title">
           Polityka Prywatności
@@ -170,6 +185,7 @@
         </div>
       </div>
 
+      <!-- Regulamin Strony -->
       <div class="accordion-section">
         <div class="accordion-title">
           Regulamin Strony
@@ -197,22 +213,40 @@
           <p>Regulamin może być zmieniony w dowolnym czasie. Aktualna wersja dostępna jest zawsze na stronie. Kontakt z zespołem możliwy jest pod adresem: <a href="mailto:warszawskaskykupujacy@gmail.com">warszawskaskykupujacy@gmail.com</a></p>
         </div>
       </div>
-
     </div>
+
+    <div style="text-align:center;">
+      <a href="index.html" class="back-home-btn">Powrót do strony głównej</a>
+    </div>
+
   </main>
+  
   <script>
     document.querySelectorAll('.accordion-section').forEach(section => {
       const btn = section.querySelector('.read-more-btn');
       const content = section.querySelector('.accordion-content');
+
       btn.addEventListener('click', () => {
         const isOpen = content.classList.contains('open');
+        
         if (isOpen) {
+          // Zamykanie
+          content.style.maxHeight = null;
           content.classList.remove('open');
           btn.textContent = 'Czytaj dalej';
         } else {
+          // Otwieranie
           content.classList.add('open');
+          content.style.maxHeight = content.scrollHeight + 'px';
           btn.textContent = 'Zwiń';
         }
+      });
+    });
+
+    // Dodatkowo: dopasuj wysokość przy zmianie rozmiaru okna
+    window.addEventListener('resize', () => {
+      document.querySelectorAll('.accordion-content.open').forEach(content => {
+        content.style.maxHeight = content.scrollHeight + 'px';
       });
     });
   </script>
