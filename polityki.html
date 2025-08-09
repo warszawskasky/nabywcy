@@ -88,43 +88,38 @@
           <button class="read-more-btn">Czytaj dalej</button>
         </div>
         <div class="accordion-content">
-          <!-- ... (twoja pełna treść polityki cookies) ... -->
+          <!-- Wklej tutaj treść polityki cookies -->
         </div>
       </div>
-
       <div class="accordion-section">
         <div class="accordion-title">
           Polityka Prywatności
           <button class="read-more-btn">Czytaj dalej</button>
         </div>
         <div class="accordion-content">
-          <!-- ... (pełna treść polityki prywatności) ... -->
+          <!-- Wklej tutaj treść polityki prywatności -->
         </div>
       </div>
-
       <div class="accordion-section">
         <div class="accordion-title">
           Regulamin Strony
           <button class="read-more-btn">Czytaj dalej</button>
         </div>
         <div class="accordion-content">
-          <!-- ... (pełna treść regulaminu) ... -->
+          <!-- Wklej tutaj treść regulaminu strony -->
         </div>
       </div>
 
     </div>
-
+    <!-- Przycisk powrotu do strony głównej -->
     <div style="text-align:center;">
       <a href="index.html" class="back-home-btn">Powrót do strony głównej</a>
     </div>
-
   </main>
-
   <script>
     document.querySelectorAll('.accordion-section').forEach(section => {
       const btn = section.querySelector('.read-more-btn');
       const content = section.querySelector('.accordion-content');
-
       btn.addEventListener('click', () => {
         const isOpen = content.classList.contains('open');
         if (isOpen) {
