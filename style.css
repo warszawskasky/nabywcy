@@ -360,3 +360,12 @@ footer {
     right: 1vw;
   }
 }
+
+/* PDF links w sekcji stowarzyszenia - responsywność */
+@media (max-width: 600px) {
+  div[style*="display: flex"] a.facebook-link {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 10px;
+  }
+}
