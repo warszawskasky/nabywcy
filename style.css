@@ -150,6 +150,11 @@ footer {
   flex-wrap: wrap;
 }
 
+/* Galeria wyśrodkowana - dla 2 obrazków info */
+.gallery-centered {
+  justify-content: center;
+}
+
 .gallery-item {
   cursor: pointer;
   flex: 1 1 calc(50% - 0.5em);
@@ -177,6 +182,10 @@ footer {
   .gallery-item {
     flex: 1 1 100%;
     max-width: 100%;
+  }
+
+  .gallery-centered {
+    justify-content: center;
   }
 }
 
