@@ -47,16 +47,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- PDF 1 -->
     <h3 style="color: #184bf2; margin-top: 20px; margin-bottom: 10px;">📄 Informacja 1</h3>
-    <iframe src="info1.pdf" width="100%" height="600px" style="border: 1px solid #ddd; border-radius: 6px; margin-bottom: 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);"></iframe>
-    <p style="text-align: center; margin-bottom: 30px;">
-      <a href="info1.pdf" target="_blank" rel="noopener" class="facebook-link pulse">📥 Pobierz info1.pdf</a>
+    <div class="pdf-container">
+      <iframe src="info1.pdf" class="pdf-viewer"></iframe>
+    </div>
+    <p style="text-align: center; margin: 15px 0 30px 0;">
+      <a href="info1.pdf" target="_blank" rel="noopener" class="facebook-link pulse">📥 Otwórz / Pobierz info1.pdf</a>
     </p>
 
     <!-- PDF 2 -->
     <h3 style="color: #184bf2; margin-top: 20px; margin-bottom: 10px;">📄 Informacja 2</h3>
-    <iframe src="info2.pdf" width="100%" height="600px" style="border: 1px solid #ddd; border-radius: 6px; margin-bottom: 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);"></iframe>
-    <p style="text-align: center;">
-      <a href="info2.pdf" target="_blank" rel="noopener" class="facebook-link pulse">📥 Pobierz info2.pdf</a>
+    <div class="pdf-container">
+      <iframe src="info2.pdf" class="pdf-viewer"></iframe>
+    </div>
+    <p style="text-align: center; margin: 15px 0;">
+      <a href="info2.pdf" target="_blank" rel="noopener" class="facebook-link pulse">📥 Otwórz / Pobierz info2.pdf</a>
     </p>
   </div>
 
@@ -134,7 +138,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section>
     <h2>Aktualności z budowy</h2>
     <div class="accordion">
-      <!-- Sierpień 2025 -->
       <div class="accordion-item">
         <button class="accordion-header">Sierpień 2025</button>
         <div class="accordion-content">
@@ -154,7 +157,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
-      <!-- Lipiec 2025 -->
       <div class="accordion-item">
         <button class="accordion-header">Lipiec 2025</button>
         <div class="accordion-content">
@@ -168,7 +170,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
-      <!-- Czerwiec 2025 -->
       <div class="accordion-item">
         <button class="accordion-header">Czerwiec 2025</button>
         <div class="accordion-content">
@@ -180,7 +181,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p>W czerwcu kontynuowane są prace wykończeniowe w kolejnych klatkach.</p>
         </div>
       </div>
-      <!-- Maj 2025 -->
       <div class="accordion-item">
         <button class="accordion-header">Maj 2025</button>
         <div class="accordion-content">
@@ -207,7 +207,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="polityki.html" class="footer-policy-link">Polityka Cookies, Prywatności i Regulamin</a>
   </p>
 </footer>
-<!-- Lightbox z nawigacją -->
 <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
   <button class="lightbox-arrow lightbox-arrow-left" onclick="prevImage(event)">←</button>
   <img id="lightbox-img" src="" alt="Powiększone zdjęcie" />
