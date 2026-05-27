@@ -66,7 +66,7 @@ section {
   width: 100%;
   height: 400px;
   border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   margin-top: 1em;
 }
 
@@ -102,6 +102,72 @@ footer {
   line-height: 1.4;
 }
 
+/* Komunikat: sanacja i dostępne mieszkania */
+.sanacja-info {
+  border: 2px solid #16a34a;
+  background: linear-gradient(135deg, #ecfdf5 0%, #ffffff 60%, #e8f0fe 100%);
+  box-shadow: 0 3px 12px rgba(22, 163, 74, 0.16);
+}
+
+.sanacja-info h2 {
+  color: #166534;
+  margin-top: 0.4em;
+}
+
+.sanacja-info p {
+  max-width: 950px;
+}
+
+.sanacja-info__badge {
+  display: inline-block;
+  padding: 0.35em 0.75em;
+  border-radius: 999px;
+  background: #dcfce7;
+  color: #166534;
+  font-size: 0.85em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.sanacja-info__button {
+  display: inline-block;
+  padding: 0.65em 1.1em;
+  background-color: #16a34a;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  animation: sanacjaPulse 2s infinite;
+}
+
+.sanacja-info__button:hover,
+.sanacja-info__button:focus {
+  background-color: #15803d;
+  box-shadow: 0 0 8px 4px rgba(22, 163, 74, 0.45);
+  outline: none;
+}
+
+.sanacja-info__button:active {
+  background-color: #166534;
+  box-shadow: none;
+}
+
+@keyframes sanacjaPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.6);
+  }
+
+  70% {
+    box-shadow: 0 0 10px 10px rgba(22, 163, 74, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0);
+  }
+}
+
 /* Link do Facebooka */
 .facebook-link {
   display: inline-block;
@@ -135,9 +201,11 @@ footer {
   0% {
     box-shadow: 0 0 0 0 rgba(24, 119, 242, 0.7);
   }
+
   70% {
     box-shadow: 0 0 10px 10px rgba(24, 119, 242, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(24, 119, 242, 0);
   }
@@ -186,6 +254,11 @@ footer {
 
   .gallery-centered {
     justify-content: center;
+  }
+
+  .sanacja-info__button {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -293,8 +366,13 @@ footer {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0;}
-  to { opacity: 1;}
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .accordion-item.active .accordion-content {
